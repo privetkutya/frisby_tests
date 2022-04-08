@@ -21,9 +21,6 @@ describe("Day 23: Boba, upload file", () => {
             await frisby.get(`https://postman-echo.com/get? ${region}=${boba}`)
                 .expect("status", 200)
                 .then(result => {
-                    // console.log(result.json.args)
-                    // console.log(result.json.args[' ' + region])
-                    // console.log(boba)
                 if (result.json.args[' ' + region] != boba){
                     notFound = true
                 }
@@ -32,24 +29,3 @@ describe("Day 23: Boba, upload file", () => {
         expect(notFound).toBe(false)
     })
 })
-
-// const response = frisby.get(`https://postman-echo.com/get? ${region}=${boba}`)
-//          console.log(response.body)
-//          if (response.json.args[region] === '83'){
-//              console.log('exit')
-//              return
-
-// for(let i=1; i<rows.length; i++){
-        //  const values = rows[i].split(',')
-        //  const region = values[0]
-        //  const boba = values[1]
-        //  frisby.get(`https://postman-echo.com/get? ${region}=${boba}`)
-        //  .expect("status", 200)
-        //  .then(result => {
-        //          if (result.json.args[region] === '83'){
-        //          a = true
-        //      }
-     //     }).
-        // }
-        // console.log(a)
-        // return expect(a).toBe(true)
