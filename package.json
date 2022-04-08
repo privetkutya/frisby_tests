@@ -1,0 +1,16 @@
+{
+  "name": "frisby_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "frisby": "^2.1.3",
+    "jest": "^27.5.1"
+  }
+}
