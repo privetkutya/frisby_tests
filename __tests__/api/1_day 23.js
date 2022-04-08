@@ -11,7 +11,7 @@ describe("Day 23: Boba, upload file", () => {
         const fileData = fs.readFileSync('./geoMap.csv', 'utf8')
         const rows = fileData.split('\n') //разделили строку в массив по переводу строки
 
-        var notFound = false
+        var not_found = false
 
         for(let i=1; i<rows.length; i++){
             const values = rows[i].split(',')
@@ -22,10 +22,10 @@ describe("Day 23: Boba, upload file", () => {
                 .expect("status", 200)
                 .then(result => {
                 if (result.json.args[' ' + region] != boba){
-                    notFound = true
+                    not_found = true
                 }
             })
         }
-        expect(notFound).toBe(false)
+        expect(not_found).toBe(false)
     })
 })
