@@ -2,8 +2,6 @@ const frisby = require("frisby");
 const Joi = frisby.Joi;
 var url = "https://swapi.dev/api/planets/"
   
-
-
 describe("Day 28: response time < 1000 ms, lighthouse performance score > 90", () => {
 
 	jest.setTimeout(30000);
