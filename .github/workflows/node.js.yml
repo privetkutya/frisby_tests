@@ -1,17 +1,10 @@
+
 name: CI
 on: [push]
 jobs:
   test:
     runs-on: ubuntu-18.04
-    strategy:
-      matrix:
-        test-file:
-          - 1_day 11.js
-          - 1_day 13.js
-          - 1_day 23.js
-          - 1_day 28.js
-          - 1_day 8.js
     steps:
       - uses: actions/checkout@v2
       - run: npm install
-      - run: npx jest ${{ matrix['test-file'] }}
+      - run: npx jest
