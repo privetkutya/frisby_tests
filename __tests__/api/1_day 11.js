@@ -29,7 +29,7 @@ describe("Day 11: watering plants", () => {
         			expect(moistureLevel2).toBeGreaterThan(99)
         			})
         		})
-			}
+		}
         })
     })
 })
